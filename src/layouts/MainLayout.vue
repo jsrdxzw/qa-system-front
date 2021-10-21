@@ -12,10 +12,10 @@
         />
 
         <q-toolbar-title>
-          老司机 - 问答系统
+          老司机 - 贴吧
         </q-toolbar-title>
 
-        <div>问我 · 答我</div>
+        <div>问我 · 答我 · 吐槽我</div>
       </q-toolbar>
     </q-header>
 
@@ -63,7 +63,13 @@ const linksList = [
     title: '提问',
     caption: 'ask a question',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: 'index'
+  },
+  {
+    title: '列表',
+    caption: 'list',
+    icon: 'list',
+    link: 'questionList'
   }
 ]
 

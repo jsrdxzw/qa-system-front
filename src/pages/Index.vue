@@ -1,18 +1,18 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page>
     <div class="q-pa-md">
-      <div class="q-gutter-md">
-        <q-input standout="bg-teal text-white" v-model="title" label="Custom standout" style="width: 100%"/>
-      </div>
+      <question-form/>
     </div>
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import QuestionForm from 'components/QuestionForm'
 
 export default defineComponent({
   name: 'PageIndex',
+  components: { QuestionForm },
   setup () {
     return {
       title: ''
