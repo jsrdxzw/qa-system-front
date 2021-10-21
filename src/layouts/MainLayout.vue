@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          老司机 - 贴吧
+          老油条 - 贴吧
         </q-toolbar-title>
 
         <div>问我 · 答我 · 吐槽我</div>
@@ -29,7 +29,7 @@
           <q-avatar size="56px" class="q-mb-sm">
             <img src="https://cdn.quasar.dev/img/boy-avatar.png" alt="personal avatar">
           </q-avatar>
-          <div class="text-weight-bold">老司机团队</div>
+          <div class="text-weight-bold">老油条团队</div>
           <div>@laosiji</div>
         </div>
       </q-img>
