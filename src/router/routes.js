@@ -8,7 +8,16 @@ const routes = [
       { path: '', name: 'questionList', component: () => import('pages/QuestionList.vue') }
     ]
   },
-
+  {
+    name: 'login',
+    path: '/login',
+    component: () => import('pages/Login')
+  },
+  {
+    name: 'article',
+    path: '/article',
+    component: () => import('pages/Article')
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
