@@ -21,6 +21,7 @@
 <script>
 import { ref } from 'vue'
 import { useQuasar } from 'quasar'
+import { api } from 'boot/axios'
 
 export default {
   name: 'QuestionForm',
@@ -43,12 +44,26 @@ export default {
           })
         } else {
           $q.notify({
+            color: 'red-5',
+            textColor: 'white',
+            icon: 'warning',
+            message: '你会匿名发表'
+          })
+        }
+        api.post('/api/post/create', {
+          authorId: 1,
+          authorName: 'yyds',
+          postTitle: label.value,
+          content: content.value
+        }).then(res => {
+          console.log(res)
+          $q.notify({
             color: 'green-4',
             textColor: 'white',
             icon: 'cloud_done',
             message: '提交成功'
           })
-        }
+        })
       },
       onReset () {
         label.value = null

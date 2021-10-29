@@ -44,6 +44,7 @@
 import { defineComponent, ref } from 'vue'
 import { api } from 'boot/axios'
 import router from '../router'
+import { useQuasar } from 'quasar'
 
 export default defineComponent({
   name: 'Login',
@@ -51,17 +52,14 @@ export default defineComponent({
   setup () {
     const username = ref('')
     const password = ref('')
+    const $q = useQuasar()
     return {
       username,
       password,
       isPwd: ref('password'),
       onLogin () {
-        api.get('/abc', {
-          params: {
-            username,
-            password
-          }
-        }).then(res => {
+        api.get('/api/employee/1').then(res => {
+          $q.notify('欢迎' + res.data.data.userName)
         })
           .catch(error => console.error(error))
           .finally(() => {

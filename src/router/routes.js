@@ -15,7 +15,7 @@ const routes = [
   },
   {
     name: 'article',
-    path: '/article',
+    path: '/article/:id',
     component: () => import('pages/Article')
   },
   // Always leave this as last one,
